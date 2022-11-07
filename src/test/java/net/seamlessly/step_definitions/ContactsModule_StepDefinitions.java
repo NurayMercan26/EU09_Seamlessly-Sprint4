@@ -9,6 +9,8 @@ public class ContactsModule_StepDefinitions {
 
     @When("User clicks on {string} module")
     public void userClicksOnModule(String moduleName) {
+
         contactsModule_page.navigateToModule(moduleName);
+
     }
 }
