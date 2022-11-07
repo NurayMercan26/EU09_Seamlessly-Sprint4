@@ -7,10 +7,9 @@ public class ContactsModule_StepDefinitions {
 
     ContactsModule_Page contactsModule_page = new ContactsModule_Page();
 
+    //module name finds the modules on the dashboard
     @When("User clicks on {string} module")
     public void userClicksOnModule(String moduleName) {
-
         contactsModule_page.navigateToModule(moduleName);
-
     }
 }
