@@ -6,6 +6,7 @@ Feature: User should be on the related module
     And user types valid password to "Employee123"
     Then user clicks on log in button and lands on the dashboard page
 
+    @wip
     Scenario: User is on the contacts module
       When User clicks on "contacts" module
 
