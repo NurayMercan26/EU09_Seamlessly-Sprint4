@@ -6,3 +6,7 @@ And user types valid username "Employee61"
 And user types valid password to "Employee123"
 Then user clicks on log in button and lands on the dashboard page
 
+  @wip
+Scenario: User can create a new note
+    When User click on the pencil icon top of the dashboard page
+    Then User clicks on the New Note module

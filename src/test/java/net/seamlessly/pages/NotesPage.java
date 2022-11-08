@@ -11,8 +11,8 @@ public class NotesPage extends BasePage{
 @FindBy(id = "notes_new_note")
     public WebElement newNoteModule;
 
-@FindBy(xpath = "//div[@class='CodeMirror-scroll']")
-    public WebElement noteWritingPage;
+   // @FindBy(xpath = "//pre[@class=' CodeMirror-line ']")
+    // public WebElement noteWritingPage;
 
 
 }
