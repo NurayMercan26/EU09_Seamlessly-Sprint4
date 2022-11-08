@@ -1,8 +1,10 @@
 package net.seamlessly.step_definitions;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.seamlessly.pages.NotesPage;
+import org.junit.Assert;
 
 public class NotesStepDefs {
 
@@ -16,14 +18,15 @@ public class NotesStepDefs {
         notesPage.newNoteModule.click();
     }
 
-   /*
+
     @Then("User can write notes on the page")
     public void user_can_write_notes_on_the_page() {
 
-        notesPage.noteWritingPage.isDisplayed();
+        notesPage.noteWritingPage.sendKeys("Hello World!");
+        Assert.assertEquals(notesPage.noteWritingPage.getText(), "Hello World!");
     }
 
-    */
+
 
 
 }
