@@ -8,5 +8,6 @@ Then user clicks on log in button and lands on the dashboard page
 
   @wip
 Scenario: User can create a new note
-    When User click on the pencil icon top of the dashboard page
-    Then User clicks on the New Note module
+    Given User click on the pencil icon top of the dashboard page
+    When User clicks on the New Note module
+    Then User can write notes on the page
