@@ -48,8 +48,28 @@ public abstract class BasePage {
 
 
     public void navigateToModule(String moduleName){
-        WebElement moduleButton = Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']//li[@data-id='"+moduleName+"']"));
+        WebElement moduleButton = Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']//li[@data-id='"+moduleName.toLowerCase()+"']"));
         moduleButton.click();
     }
 
-}
+    public void navigateToRightSideModules(String moduleName) {
+        WebElement moduleButton = Driver.getDriver().findElement(By.xpath("//div[@class='header-right']//div//div[@aria-label='" + moduleName + "']"));
+        moduleButton.click();
+    }
+
+        public void settingsMenu(String moduleName){
+
+            if(moduleName.equals(" View profile ".trim())){
+                WebElement viewProfile = Driver.getDriver().findElement(By.xpath("//a[@class='user-status-menu-item__header']"));
+                viewProfile.click();
+            } else {
+                WebElement menuElement= Driver.getDriver().findElement(By.xpath("//nav//li[@data-id='"+moduleName.toLowerCase()+"']"));
+                menuElement.click();
+                //Settings, About, Help and Log out buttons can be called with this method
+            }
+
+
+        }
+    }
+
+
