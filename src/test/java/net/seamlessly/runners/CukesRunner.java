@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         features ="src/test/resources/features",
         glue = "net/seamlessly/step_definitions",
         dryRun = false,
-        tags = "@wip",
+        tags = "@SEAMLES-2502",
         publish = true
 
 

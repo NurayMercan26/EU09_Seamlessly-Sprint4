@@ -26,7 +26,6 @@ public class Profile_StepDefs {
         BrowserUtils.waitFor(10);
         Assert.assertTrue(profilePage.Email.getText().contains("nuraymercan26@gmail.com"));
     }
-
     @When("user see phone number {string}")
     public void user_see_phone_number(String string) {
         profilePage.phone.sendKeys(string);
