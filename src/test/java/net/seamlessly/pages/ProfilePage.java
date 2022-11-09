@@ -30,4 +30,5 @@ public class ProfilePage extends BasePage{
 
    @FindBy(xpath = "//div[@class='displayname__actions-container']")
     public WebElement nameHolder;
+   //
 }

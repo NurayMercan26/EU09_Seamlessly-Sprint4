@@ -1,7 +1,5 @@
-
 @SEAMLES-2506
 Feature: User should be on the related module
-
   Background: User should be on the dashboard page with valid credentials
     Given user is on the Seamlessly login page
     And user types valid username "Employee111"
@@ -14,12 +12,15 @@ Feature: User should be on the related module
     Then  User clicks on "Settings" module from the right side
     Then  User clicks on "Logout" button from profile menu
 
+
+
   @SEAMLES-2502
   Scenario:  User can see at least following titles inside personal info under Profile Settings page;
     When user see fullname "Nuray Mercan"
-    And user see email "nuraymercan25@gmail.com"
+    And user see email "nuraymercan26@gmail.com"
     And user see phone number "05064251472"
     Then user see verify that  titles inside personal info
+
 
   @SEAMLES-2503
   Scenario: User can change "Full name" info under profile Settings page
