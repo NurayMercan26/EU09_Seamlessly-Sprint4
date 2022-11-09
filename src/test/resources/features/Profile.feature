@@ -9,3 +9,4 @@ Feature: User should be on the related module
   @wip
   Scenario: User is on the contacts module
     When User clicks on "setting profile" module
+    And user see the profile  page
