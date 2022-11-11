@@ -10,14 +10,13 @@ public class ProfilePage extends BasePage{
     @FindBy(id="displayname")
     public WebElement fullName;
 
-    @FindBy(id="email")
-    public WebElement Email;
 
-    @FindBy(xpath = "//span[@class='icon-federation-menu icon-link']")
+    @FindBy(xpath = "//*[@id=\"phoneform\"]/h3/a")
     public WebElement menuItem;
 
-    @FindBy(xpath = "//span[.='Only visible to people matched via phone number integration through Talk on mobile']")
+    @FindBy(xpath = "//div/ul//a[@class='menuitem action action-v2-private permanent active']")
     public WebElement privateButton;
+
 
     @FindBy(id="phone")
     public WebElement phone;
@@ -25,10 +24,18 @@ public class ProfilePage extends BasePage{
     @FindBy(id="localeinput")
     public WebElement LocaleInput;
 
-    @FindBy(xpath = "//span[@class=\"icon-checkmark hidden\"]")
-    public WebElement hiddenPhone;
 
-   @FindBy(xpath = "//div[@class='displayname__actions-container']")
+    @FindBy(xpath = "//a[@class='federation-menu']//ul//Li//a")
+    public WebElement btnPrivate;
+
+
+   @FindBy(xpath = "//label[@for='displayname']")
     public WebElement nameHolder;
-   //
+
+
+   @FindBy(xpath = "//label[@for='email']")
+    public WebElement emailTrue;
+
+   @FindBy(xpath = "//*[@id=\"personal-settings-avatar-container\"]/div[2]/h3")
+    public WebElement ProfilePicture;
 }
