@@ -15,6 +15,8 @@ public class Profile_StepDefs {
      ProfilePage profilePage = new ProfilePage();
 
 
+
+
     @When("user see fullname {string}")
     public void user_see_fullname(String string) {
         Driver.getDriver().get("https://qa.seamlessly.net/index.php/settings/user");
@@ -29,8 +31,9 @@ public class Profile_StepDefs {
     }
     @When("user see phone number {string}")
     public void user_see_phone_number(String string) {
-        profilePage.phone.sendKeys(string);
+        profilePage.phone.sendKeys("05064251472");
         BrowserUtils.waitFor(10);
+        BrowserUtils.sleep(5);
         Assert.assertTrue(profilePage.phone.getText().contains("05064251472"));
     }
 
@@ -66,11 +69,13 @@ public class Profile_StepDefs {
         BrowserUtils.waitFor(15);
         profilePage.menuItem.click();
         profilePage.btnPrivate.click();
+        BrowserUtils.sleep(10);
     }
 
     @When("user write phone number {string}")
     public void user_write_phone_number(String string) {
-        profilePage.phone.sendKeys("string");
+        profilePage.phone.sendKeys("05064251472");
+        BrowserUtils.sleep(10);
     }
 
     @Then("user see verify that phone number info as private under Profile Settings page")
